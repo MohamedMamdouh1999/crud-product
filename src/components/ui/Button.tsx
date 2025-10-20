@@ -6,8 +6,8 @@ interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
 }
 
-const Button = ({className, width = 'w-full', children}: IProps) => {
-    return <button className={`${className} ${width} p-2 rounded-md text-white`}>{children}</button>
+const Button = ({className, width = 'w-full', children, ...props}: IProps) => {
+    return <button className={`${className} ${width} p-2 rounded-md text-white`} {...props}>{children}</button>
 }
 
 export default Button
